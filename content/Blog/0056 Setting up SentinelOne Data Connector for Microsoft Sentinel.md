@@ -10,7 +10,7 @@ draft: false
 
 Microsoft Sentinel has a SentinelOne Data Connector which can be used for retrieving data from different REST endpoints in SentinelOne. This allows us to store logs inside of Microsoft Sentinel which the SOC vendor can use to respond to security incidents. In this article, I'll go through setting up the SentinelOne Data Connector.
 
-## V1 .vs V2
+## V1 .vs V2 Data Connector
 
 The **SentinelOne V2 Data Connector** comes with support for **Unified Alert Management (UAM)** and **Wayfinder**. While **SentinelOne V2 Data Connector** doesn't come with support for these different capabilities. And migrating from V1 to V2 shouldn't break anything since `SentinelOneAlertsV2_CL` maps the same columns so all the analytics rules, hunting query, and workbooks works without needing any changes.
 
