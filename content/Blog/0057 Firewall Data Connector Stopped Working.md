@@ -1,5 +1,5 @@
 ---
-title: "Firewall Data Connector Stopped Forwarding Logs to Microsoft Sentinel"
+title: "Azure Monitor Agent Stopped Forwarding Firewall Logs to Microsoft Sentinel"
 created: 2026-09-26
 modified: 2026-09-26
 tags: ["SIEM", "SOC"]
