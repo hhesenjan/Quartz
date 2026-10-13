@@ -1,5 +1,5 @@
 ---
-title: "Increasing Disk Space on Linux Systems"
+title: "Increasing Disk Space on Linux Servers"
 created: 2026-09-26
 modified: 2026-09-26
 tags: ["SIEM", "SOC"]
@@ -8,13 +8,13 @@ draft: false
 
 ## Introduction
 
-I think one of the most frustrating thing about Linux systems is when they run out of the disk space and the only way to increase it is through the CLI. In this document I'll og through increasing the disk space for Linux systems.
+I'll be completely honest I really like Linux as a operating system. However, the one thing I really dislike about it is increasing disk space through CLI since there are so many ways it can be done and there are multiple of extensions to choose from. To make sure that I don't forget about increasing disk spaces in Linux, I decided to create this article.
 
 *Please keep in mind that it has been some years since I worked with Linux servers...*
 
 ## Increase Disk Space
 
-Our Linux VM which is responsible for forwarding firewall logs uses EXT4 partition so I'll go through increasing disk space for EXT4 extension.
+You can use the following commands to increase the disk space for the EXT4 extension.
 
 | Step | Description                  | Command                               |
 | ---- | ---------------------------- | ------------------------------------- |
@@ -27,11 +27,11 @@ Our Linux VM which is responsible for forwarding firewall logs uses EXT4 partiti
 | 7    | Reboot rsyslog               | `systemctl restart rsyslog`           |
 | 8    | Reboot Azure Monitor Agent   | `systemctl restart azuremonitoragent` |
 
-Once the disk space and the different services were rebooted the data connector started working again.
+If you have any services running on the server, I would recommend rebooting them and they should start working without any issues. 
 
 ## Decreasing Disk Space
 
-This section of the document goes through decreasing disk space. Its crucial to note that this step requires us to deattach the disk and then resize it with a different VM.
+If you think increasing disk space is a-lot of work well... I got terrible news since in Linux to decrease the disk space it needs to be resized through a different VM.
 
 | Step | Description                    | Command                                                                                                                   |
 | ---- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
@@ -43,9 +43,9 @@ This section of the document goes through decreasing disk space. Its crucial to 
 | 6    | View block and block size      | `tune2fs -l /dev/sda2 \| grep -E 'Block (count\|size)'`<br>                                                               |
 | 7    | Shrink the partition           | `parted /dev/sda`<br>`unit s`<br>`print`<br>`resizepart 2 <End>s`                                                         |
 
+
 I also decided to include instructions to decrease size since it might help with reducing cost once you have figured out why the Linux VM consumes a-lot  of disk space.
 
 ## Conclusion
 
-I use Windows as a main operating system since its a system that just works out of the box. However, after writing this article and seeing the knowledge I lost about Linux it makes me want to use Linux as a primary operating system going forward. I think having Linux skill is crucial going forward since majority of critical infrastructure runs on it. 
-
+I primarily use Windows as a main operating system since it works out of the box. However, after writing this article, I realized that my Linux skills have been degrading and I'll be focusing on improving the Linux skills going forward by using it as a primary operating system. Hopefully, this article is useful to someone who needs it.
