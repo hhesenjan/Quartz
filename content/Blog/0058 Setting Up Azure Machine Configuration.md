@@ -8,15 +8,11 @@ draft: false
 
 ## Introduction
 
-So around a month ago, I was in communication with the Infrastructure Team about hardening the Windows Servers in Azure since there are some configurations that can be applied to further secure these servers. During the meeting the Infrastructure Team mentioned **Azure Machine Configuration** which could be used for hardening the Windows Servers without needing them to be domain-joined. So, I decided to deep dive into Azure Machine Configuration!
-
-After spending weeks on and off working on Azure Machine Configuration, I managed to create a Proof of Concept. I decided to create this article since there were a-lot of issues that I faced while setting up Azure Machine Configuration  which wasted a-lot of working hours. I hope this article can help you with not losing these work hours.
+Azure Machine Configuration can be complex to configure when initially setting it up as there are little resources about it. However, its a great way of auditing and enforcing specific configurations throughout the organization. As an example instead of logging into all Windows and Linux VMs to change time-zone it can instead be applied through Azure Machine Configuration within few minutes. In this article I'll go through implementing Azure Machine Configuration to hopefully help others with setting it up on their environment.
 
 ## What is Azure Machine Configuration?
 
-Azure Machine Configuration is a way to audit and apply the necessary changes to all the virtual machines in your Azure environment including Windows and Linux operating systems. As an example Husenjan LLC has acquired Cosmos LLC and the Infrastrucutre Team isn't happy with time-zone on all the servers of Cosmos LLC. Instead of logging into all the servers and changing the time-zone manually which would take hours to days they can instead setup Azure Machine Configuration to do these changes. The sky is the limit with Azure Machine Configurations since we can do any changes necessary.
-
-Additionally, Azure Machine Configuration can also be used to enforce specific configuration on Hybrid Environments where Azure Arc is installed on the different on-premise virtual machines. The right-way to look at Azure Machine Configuration is a unified way to manage all VMs in Azure with minimal effort.
+Azure Machine Configuration is a way to audit and apply the necessary changes to all the virtual machines in your Azure environment including Windows and Linux operating systems. As an example Husenjan LLC has acquired Cosmos LLC and the IT team at Husenjan LCC isn't happy with the time-zone on the VMs of Cosmos LLC. Instead of logging into all the servers and changing the time-zone manually which would take hours to days they can instead setup Azure Machine Configuration to do these changes. When it comes to Azure Machine Configuration the sky is the limit.
 
 ## Requirements
 
