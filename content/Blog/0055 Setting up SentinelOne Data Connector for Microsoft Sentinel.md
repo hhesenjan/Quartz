@@ -8,7 +8,7 @@ draft: false
 
 ## Introduction
 
-Microsoft Sentinel has a SentinelOne Data Connector which can be used for retrieving data from different REST endpoints in SentinelOne. This allows us to store logs inside of Microsoft Sentinel which the SOC vendor can use to respond to security incidents. In this article, I'll go through setting up the SentinelOne Data Connector.
+Microsoft Sentinel has a SentinelOne Data Connector which can be used for retrieving data from different REST endpoints in SentinelOne. This allows us to store logs inside of Microsoft Sentinel which can be used to collerate a secuity incident when it occurs. In this article, I'll go through setting up the SentinelOne Data Connector.
 
 ## V1 .vs V2 Data Connector
 
