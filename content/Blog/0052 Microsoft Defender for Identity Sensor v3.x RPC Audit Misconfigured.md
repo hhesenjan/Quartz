@@ -8,13 +8,13 @@ draft: false
 
 ## Introduction
 
-Currently, I'm working on onboarding the Microsoft Defender for Identity sensors to the domain controllers in my organization. While onboarding them to identity sensor, Microsoft sent an alert where it said the *"Identity Sensor v3.x PRC Audit Misconfigured"*. In this article I'll go through resolving the alert and also provide information about RPC which might help you with understanding the purpose of collecitng RPC telemetry data. 
+Microsoft Defender for Identity is a product that comes with Microsoft Defender XDR. Its primary capabilities is to analyze your on-premise (domain server) to search for misconfigurations. While setting up the Microsoft Defender for Identity Sensor I was faced with a alert which said the following *"Identity Sensor v3.x RPC Audit Misconfigured"*. In this article I'll go through resolving the issue.
 
 ## What is RPC?
 
 Remote Procedure Call (RPC) is a communication protocl which uses TCP or UDP to communicate with an program running in a different system. RPC uses the client-server model where the client communicates with the server for the services. As an example the client invokes a function and the server executes the function and returns the data to the client.
 
-Microsoft uses RPC protocol for many of its components such as AD Replication, Print Spooler, Account and Policy Lookup and so forth. This is why threat actors are interested in targeting the RPC protocol.
+Microsoft uses RPC protocol for many of its components such as AD Replication, Print Spooler, Account and Policy Lookup and so forth. This is why threat actors are interested in targeting services running RPC and that is why Microsoft wants to monitor it.
 
 ## Solution
 

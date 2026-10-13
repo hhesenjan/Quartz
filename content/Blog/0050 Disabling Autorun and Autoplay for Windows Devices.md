@@ -8,14 +8,13 @@ draft: false
 
 ## Introduction
 
-In my organization, I'm currently working on hardening our Windows devices following security recommendations from Microsoft. One of these recommendations for our environment were to **Disable Autorun and Autoplay for USB and MTP devices** which will prevent devices such as USB and MTP from autorun and autoplay. Here is a overview of the security recommendations I'll be implementing:
+One of Microsoft Security recommendations is to disable Autorun and Autoplay on USB and MTP devices. The reason Microsoft recommends it is because threat actors could abuse these capabilities to autorun a malware or ransomware. Here is a quick overview of these security recommendations:
 
 - Set default behavior for 'AutoRun' to 'Enabled: Do not execute any autorun commands'
 - Disable 'Autoplay for non-volume devices'
 - Disable 'Autoplay' for all drives
 
-In this article I'll be going through implementing these security recommendations from Microsoft. You should receive anywhere from 0.5% to 1% higher secure score by implementing the following security recommendation.
-
+In this article I'll be going through implementing these security recommendations from Microsoft. Also implementing these security recommendations can help with increasing your secure score by 0.5% to 1% and who doesn't want that...
 
 ## PowerShell
 

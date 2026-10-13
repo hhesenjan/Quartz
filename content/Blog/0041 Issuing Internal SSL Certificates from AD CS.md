@@ -8,9 +8,9 @@ draft: false
 
 ## Introduction
 
-In our organization we have many internal web applications which uses the certificate provided by our Active Directory Certificate Services (AD CS). The information about internal certificates where lost because the colleague who was responsible for these requests resigned from the organization.
+In a organization its common to have internal web application which uses the certificate provided by Active Directory Certificate Services (AD CS). The information about generating these internal certificate can quickly be lost since its something that people generate once in 1, 2, and 3 years.
 
-None of my colleagues took the ticket for a long time therefore I decided to take it and resolve it. I issued multiple of certificates but received the following error message `ERR_CERT_COMMON_NAME_INVALID` but after many failures I found out the solution and decided to share it here. 
+While generating the certificate the primary issue that I was facing was related to the error `ERR_CERT_COMMON_NAME_INVALID` and after spending hours and hours I managed to come with the solution to solve the problem.
 
 ## What was the issue?
 

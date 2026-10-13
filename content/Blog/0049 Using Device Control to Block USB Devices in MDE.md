@@ -8,7 +8,7 @@ draft: false
 
 ## Introduction
 
-I'm currently working on implementing security controls for USB devices in my organization to increase our security posture. Fortunately for us Device Control in Microsoft Defender for Endpoint (MDE) allows us implement security controls by ensuring that users can only perform specific actions to USB devices such as Read, Write, and Execute. In this article I'll go through implementing Device Control which allows users to only perform read and write actions to USB devices. 
+Many organizations nowadays are working on restricting the use of USB devices. In Microsoft Defender for Endpoint (MDE) its possible through Device Control as it comes with capabilities to block read, write, and execute permissions. In this article I'll go through implementing restriction for USB devices. 
 
 ## Purpose of Protecting USB Devices
 
