@@ -8,9 +8,7 @@ draft: true
 
 ## Introduction
 
-I pushed out Attack Surface Reduction Rules (ASR) to all endpoints in our organization and right after deploying it to the production a issue occurred with [QGIS 3.4](https://qgis.org/), which is a business application used by navigators. I spent hours troubleshooting the issue and found out that the issue was related to Azure File Share.
-
-I decided to create this article to help someone who is experiencing the same issue with [QGIS 3.4](https://qgis.org/) application since I wasn't able to find anything in Google regarding it.
+Attack Surface Reduction Rules (ASR) can sometimes conflict with applications in the environment. I originally thought there was a issue with our ASR configurations since the [QGIS 3.4](https://qgis.org/) application was randomly crashing. I spent hours troubleshooting the issue and found out that it was related to Azure File Share. Instead of keeping the information for myself, I decided to share it to hopefully help others who are facing similar issues. 
 
 ## Solution
 

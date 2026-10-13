@@ -28,8 +28,7 @@ This section goes through finding the Microosft Defender XDR IoCs.
 
 ## Adding File Hash Into IoCs
 
-In our organization TeamViewer is a widely used application but recently when TeamViewer has been updating itself a false positive security alert is triggered related to the following file hash.
-
+So basically there is a issue with TeamViewer where it fails to update itself and triggers false positive alerts. Here is overview of the TeamViewer Hash.e
 * File Hash : `48599dcb6e68b95eabc3f1fae33ad44c39a1ea189ae14350fa6e294ebea4d5ae`
 
 In this section I'll go through whitelisting that SHA-256 in Microsoft Defender XDR to stop the false positive security alerts that we have been receiving recently.
