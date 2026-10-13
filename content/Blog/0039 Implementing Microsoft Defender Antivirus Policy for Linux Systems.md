@@ -8,9 +8,7 @@ draft: false
 
 ## Introduction
 
-I resigned from my current company for a few weeks ago because I got a much better opportunity at another company. And since my resignation I have been assigned tasks to implement stricter security controls for both Windows and Linux systems. Currently, we are relatively new to migrating Linux servers to Microsoft Defender for Endpoint but we are testing with some servers. 
-
-In this article I'll go through the steps to implement Microsoft Antivirus Policy for Linux systems.
+While Microsoft Defender for Endpoint comes with default configurations which can be assigned to Windows Machines. There aren't many writeups on setting up Antivirus Policy for Linux servers. In this article I'll go through implementing Microsoft Antivirus Policy for Linux systems.
 
 ## Enforcement Scope
 
