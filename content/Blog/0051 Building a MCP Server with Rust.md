@@ -8,9 +8,8 @@ draft: false
 
 ## Introduction
 
-I recently have been working on using AI more and more emvployees in the organization is requesting to use more features such as MCP servers. I understand that AI comes with risks where if we give employees access to using MCP servers and randomly a data breach happens we will be the ones investigating througout the night. 
+I'm seeing that MCP is becoming more and more popular since it allows us to connect a tool into LLM where it can automatically perform the actions for us. I understand the usefulness of it but when it comes to giving that kind of access to a normal users it seems as a terrible ideas since these MCP servers usually uses API keys. And managing all the API keys which comes with MCP servers becomes extremely difficult. Instead of blindly ignoring the tool, I decided to dive into it since it will probably come in good use in the future.
 
-Additionally, once access has been given to the employee it's impossible to remove it. Instead of blindly accepting specific requests I decided to build my own MCP server and analyze the risks it comes with.
 
 ## What is MCP servers?
 
@@ -538,6 +537,6 @@ The MCP server should now automatically start once the Claude desktop applicatio
 
 ## Conclusion
 
-Building a MCP server has taught me a-lot about the importance of MCP servers going froward, since it allows us to create functions that performs specific actions such as retrieving, updating, and deleting data from internal application that the users can use. This increases the productivity significantly since the employee never has to leave the AI desktop application to retrieve, change, or delete data. 
+Building a MCP server has taught me a-lot about the importance of MCP servers. Its a way for us to excelerate the AI desktop application to perform real actions on a system which the specific instructions that we provide it. This can help with increasing productivity since a user might never actually need to leave the AI desktop application to retrieve, change, and delete data when it can be done through AI desktop application.
 
-However, this also means that we need to implement stricter security for MCP servers where there are back-and-forth communication with the MCP server and user to ensure it's updating or deleting the correct data. Additionally, this means implementing version controls and longer backup retention is important since AI model could do mistakes and start updating more files than the user requested.
+I also understand that there are risks with MCP servers where the user can accidentally allow the LLM to perform terrible mistake such as deleting all the data inside of a SQL table as an example. To avoid these situations its important for us to implement strict instructions and access for the LLM where it can only delete one data at the time and not multiple ones within few miliseconds to seconds apart. 
