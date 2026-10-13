@@ -1,5 +1,5 @@
 ---
-title: "Azure Monitor Agent Stopped Forwarding Firewall Logs to Microsoft Sentinel"
+title: "Increasing Disk Space on Linux Systems"
 created: 2026-09-26
 modified: 2026-09-26
 tags: ["SIEM", "SOC"]
@@ -8,7 +8,7 @@ draft: false
 
 ## Introduction
 
-Well recently we had a issue with the data connector which was forwarding our firewall logs to Microsoft Sentinel. The issue was related to the disk space being full at the point nothing could run on the system. Unfortunately, there were no documentation for the way it was configured or the right way of increasing the disk space since in Linux there are multiple of ways to increase disk space. In this article I'll go through increasing the disk space. 
+I think one of the most frustrating thing about Linux systems is when they run out of the disk space and the only way to increase it is through the CLI. In this document I'll og through increasing the disk space for Linux systems.
 
 *Please keep in mind that it has been some years since I worked with Linux servers...*
 
@@ -47,4 +47,5 @@ I also decided to include instructions to decrease size since it might help with
 
 ## Conclusion
 
-I primarily focus on things related to cybersecurity but this situation was unique since none knew the reason the data connector stopped working and there were little to none documentation. Therefore I decided to dive into the issue and resolved it by incresing the disk space. I think this information might be helpful for others who might be experiencing similar issue.
+I use Windows as a main operating system since its a system that just works out of the box. However, after writing this article and seeing the knowledge I lost about Linux it makes me want to use Linux as a primary operating system going forward. I think having Linux skill is crucial going forward since majority of critical infrastructure runs on it. 
+
