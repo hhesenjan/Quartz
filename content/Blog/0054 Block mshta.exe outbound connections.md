@@ -12,7 +12,7 @@ Microsoft HTML Host Application (mshta.exe) is a legacy feature in Windows that 
 
 ## Legacy Applications
 
-I work in the offshore industry where small changes can create massive distruptions throughout the busienss. This is why I would highly recommend you to research your own environment before disabling outbound connection for the mshta.exe process. Here are some KQLS that could be useful to see whether mstha.exe is widely used in your organization:
+Depending on the industry you work at small changes can create massive distruptions throughout the business. This is why I would recommend researching your own environment before disabling outbound conenction for `mshta.exe`. Here are some queries which can help with investigating it:
 
 ```sql
 DeviceNetworkEvents

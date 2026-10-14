@@ -18,7 +18,7 @@ In this article I'll be going through implementing these security recommendation
 
 ## PowerShell
 
-I understand that in my recent articles I have been building PowerShell scripts to harden the different systems instead of configuring it through Microsoft Intune. The reason for that is because I work in the offshore industry sector where the endpoints are managed through SCCM and NinjaOne. Here is the PowerShell script I built which will implement these security recommendations:
+Here is a overview of the PowerShell script which will disable `Autorun` and `Autoplay` for PowerShell.
 
 ```powershell title="DisableAutorunAndAutoplay.ps1"
 #

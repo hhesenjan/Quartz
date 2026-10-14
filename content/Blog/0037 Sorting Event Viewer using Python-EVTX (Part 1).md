@@ -8,9 +8,7 @@ draft: false
 
 ## Introduction
 
-Windows Event Viewer consists of a-lot of informations such as login attempts, account updates, computer account updates and much more. Nowadays all logs inside of Windows Event Viewer is sent over to Microsoft Sentinel where the data can be fecthed using KQL.
-
-However, in the offshore industry in some circumstances the event viewer logs aren't sent over to Microsoft Sentinel because of brandwidth costs or that the company doesn't have the budget to send extreme amount of data to Microsoft Sentinel. In these circumstances python libraries such as `Python-EVTX` will come in handy, as these will allow us to quickly investigate security incidents through a pre-built script.
+Windows Event Viewer consists of a-lot of informations such as login attempts, account updates, computer account updates and much more. Nowadays all logs inside of Windows Event Viewer is sent over to Microsoft Sentinel where the data can be fecthed using KQL. In some situations the logs might not be retrieveable by Microsoft Sentinel and in these situation using `Python-EVTX` can be useful to investigate these logs using prebuilt python scripts. 
 
 ## Event Viewer Logs
 

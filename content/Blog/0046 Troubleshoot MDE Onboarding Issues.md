@@ -8,13 +8,11 @@ draft: false
 
 ## Introduction
 
-So basically some devices that where offshore were failing to be onboarded to Microsoft Defender for Endpoint (MDE) after running the MDE onboarding script. I originally taught it was because of brandwidth limitations but after a week these endpoints where still not being onboarded therefore I decided to troubleshoot the issue and after spending hours troubleshooting I found the solution.
-
-In this article I'll go through the way I solved the issue to hopefully help others who are in similar position.
+So basically while onboarding Microsoft Defender for Endpoint (MDE) there can be some issues with some endpoints failing to be onboarded because of missing components or broken components. In this article I'll go through fixing broken/missing components.
 
 ## Solution
 
-In some cases a device that is offshore might have failed to update a file or component since it lost internet connectivity. And these files and components might be used by MDE to onboard the device to MDE.
+All these commands should fix the missing and broken components related to Windows which then should allow Microsoft Defender for Endpoint (MDE) to run without any issues. 
 
 ```powershell title="Solution"
 # 1. Perform Windows Update (Wait Around 3 minutes)
@@ -33,8 +31,8 @@ DISM /Online /Cleanup-Image /RestoreHealth
 sfc /scannow
 ```
 
-What all these commands does is update the operating system, installing the sense censor, and fix the corrupted component and files. Once all these actions are performed I would highly recommend running the MDE onboarding script again.
+What all these commands does is updating the operating system and installing/fixing the different components which Microsoft Defender for Endpoint uses. 
 
 ## Conclusion
 
-So basically some devices that where offshore were failing to be onboarded to Microsoft Defender for Endpoint (MDE) because some component and files where corrupted. And using the commmands that where mentioned in the [[#Solution|Solution]] should fix issue with the operating system.
+Microsoft Defender for Endpoint (MDE) components are a-part of Windows operating system and sometimes these components can be missing or broken because of Windows Updates. However, after using the commands mentioned in the solution it should solve these issues. 
