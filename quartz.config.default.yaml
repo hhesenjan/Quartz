@@ -1,13 +1,13 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: Husenjan
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: quartz.jzhao.xyz
+  baseUrl: husenjan.com
   ignorePatterns:
     - private
     - templates
@@ -16,9 +16,9 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
-      code: IBM Plex Mono
+      header: SN Pro
+      body: SN Pro
+      code: Google Sans Code
     colors:
       lightMode:
         light: "#faf8f8"
@@ -44,7 +44,7 @@ plugins:
   - source: "@quartz-community/created-modified-date"
     enabled: true
     options:
-      defaultDateType: modified
+      defaultDateType: created
       priority:
         - frontmatter
         - git
@@ -203,8 +203,7 @@ plugins:
     enabled: true
     options:
       links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+        LinkedIn: https://linkedin.com/u/hhesenjan
     layout:
       position: footer
       priority: 50

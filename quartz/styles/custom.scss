@@ -1,3 +1,143 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoLvRvi-Molsg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Mr De Haviland';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mrdehaviland/v15/OpNVnooIhJj96FdB73296ksbOg3F60M.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+#signature {
+    font-family: 'Mr De Haviland';
+    font-size: 3em;
+    font-weight: 400;
+    margin-top: 0.4em;
+}
+
+.page-title {
+    font-family: 'Bricolage Grotesque';
+    font-weight: 400;
+}
+
+.section-ul .section-li .section {
+    display: grid;
+    grid-template-columns: 1.5fr 4.25fr 1.5fr repeat(2, 0);
+}
+
+code {
+  font-size: 0.8em;
+}
+
+@media (max-width: 780px) {
+    .section-ul .section-li .section {
+        display: grid;
+        grid-template-columns: 3fr 6fr repeat(2, 0);
+    }
+    .content li {
+        padding:0px 10px 0px 0px;
+    }
+    .recent-notes {
+        display: none;
+    }
+}
+
+/* certs.css — compact table */
+
+.certs-table {
+  border-collapse: collapse;
+  font-family: ui-monospace, "JetBrains Mono", monospace;
+  font-size: 12px;
+  background: #ffffff;
+  color: #1a1a1a;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  .certs-table {
+    background: #1c1c1f;
+    color: #e6e8eb;
+    border-color: #2a2a2e;
+  }
+}
+
+.certs-table th,
+.certs-table td {
+  padding: 6px 10px;
+  vertical-align: middle;
+  text-align: left;
+  border-bottom: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  line-height: 1.2;
+}
+.certs-table th:last-child,
+.certs-table td:last-child { border-right: 0; }
+.certs-table tr:last-child td { border-bottom: 0; }
+
+@media (prefers-color-scheme: dark) {
+  .certs-table th,
+  .certs-table td {
+    border-bottom-color: #2a2a2e;
+    border-right-color: #2a2a2e;
+  }
+}
+
+.certs-table th {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  background: #fafafa;
+  width: 110px;
+  white-space: nowrap;
+}
+@media (prefers-color-scheme: dark) {
+  .certs-table th { background: #161618; }
+}
+
+.certs-table th[data-status="done"]    { color: #059669; }
+.certs-table th[data-status="pending"] { color: #d97706; }
+.certs-table th[data-status="todo"]    { color: #2563eb; }
+@media (prefers-color-scheme: dark) {
+  .certs-table th[data-status="done"]    { color: #5be3a7; }
+  .certs-table th[data-status="pending"] { color: #f5b454; }
+  .certs-table th[data-status="todo"]    { color: #6f8cff; }
+}
+
+.certs-cell {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.certs-chip {
+  display: inline-block;
+  padding: 2px 7px;
+  font-size: 11px;
+  font-weight: 500;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  color: inherit;
+  text-decoration: none;
+  line-height: 1.4;
+  transition: border-color 0.15s ease;
+}
+@media (prefers-color-scheme: dark) {
+  .certs-chip { border-color: #2a2a2e; }
+}
+
+a.certs-chip:hover { border-color: #10b981; }

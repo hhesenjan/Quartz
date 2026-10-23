@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "plugins": {
+    "encrypted-pages": {
+      "source": "github:quartz-community/encrypted-pages",
+      "resolved": "https://github.com/quartz-community/encrypted-pages.git",
+      "commit": "9c1f586faa7ce464ea8048e0948b890ee18e0971",
+      "installedAt": "2026-10-23T18:01:32.435Z"
+    },
+    "explorer": {
+      "source": "github:quartz-community/explorer",
+      "resolved": "https://github.com/quartz-community/explorer.git",
+      "commit": "bf8e93766283caab163fc11bc8b5904790a769bc",
+      "installedAt": "2026-10-23T18:06:26.438Z"
+    }
+  }
+}
